@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[JavaSE]]></title>
+    <url>%2F2019%2F04%2F02%2FJavaSE-JavaSE-JavaSE%2F</url>
+    <content type="text"><![CDATA[java基础知识笔记 java中定义变量格式报错： float f = 1999.99； 因为默认的浮点为double类型，这样会丢失精度，编译报错！需强制转换 语句System.out.println(1+2+”java”+3+4)输出的结果是 3java34 java中每种数据类型都是固定大小，故生成的程序不区分32位和64位。 123456789101112131415 // Java中break配合标记可以跳出**外层**for循环 import java.util.Random; public class Hello&#123; public static void main(String[] args) &#123;int i, j; itcast: for (i = 1; i &lt;= 9; i++) &#123; for (j = 1; j &lt;= i; j++) &#123; if (i &gt; 2) &#123; System.out.print(&quot;break\n&quot;); break itcast; &#125; &#125;&#125; System.out.print(&quot;#\n&quot;); &#125; 在Java中定义时类的修饰符可以有 public、default（缺省）、protected、private,[为何Java在定义时需要类的修饰符啊？C++中定义类时不需要] 在Java中，类只支持单继承，不允许多继承，也就是说一个类只能有一个直接父类。 在子类中，访问父类中的成员变量格式： 1super.父类中的成员变量 抽象方法定义的格式： 1public abstract 返回值类型 方法名(参数); 抽象类定义的格式： 12abstract class 类名 &#123;&#125; 抽象类的细节问题 1、抽象类一定是个父类？ 是的，因为不断抽取而来的。 2、抽象类中是否可以不定义抽象方法？ 是可以的，那这个抽象类的存在到底有什么意义呢？不让该类创建对象,方法可以直接让子类去使用 3、抽象关键字abstract不可以和哪些关键字共存？ 1、private：私有的方法子类是无法继承到的，也不存在覆盖，而abstract和private一起使用修饰方法，abstract既要子类去实现这个方法，而private修饰子类根本无法得到父类这个方法。互相矛盾。 2、final，暂时不关注，后面学 3、static，暂时不关注，后面学]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019书单]]></title>
+    <url>%2F2019%2F03%2F10%2FOther-2019%E4%B9%A6%E5%8D%95%2F</url>
+    <content type="text"><![CDATA[2019书单 《thinking in UML》 《大话设计模式》 《TCP/IP详解 卷1：协议》 《TCP/IP详解 卷2：实现》 《TCP/IP详解 卷3：TCP事务协议、HTTP、NNTP和Unix域协议》 《深入理解Linux内核》 《windows核心编程》 python 1 《代码大全》 2 《程序员修炼之道》 3 《计算机程序设计与解释》 4 《C程序设计语言》 5 《算法导论》 6 《重构：改善既有代码的设计》 7 《人月神话》 8 《计算机程序设计艺术》 9 《代码整洁之道》 10 《编程人生》 11 《编码：隐匿在计算机软硬件背后的语言》 1 《哥德尔、埃舍尔、巴赫——集异璧之大成》 2 《终极算法》 3 《人工智能时代》 4 《走近2050——注意力、互联网与人工智能》 5 《奇点临近》 6 《情感机器》 7 《图灵的大教堂——当人工智能之父与计算机之父相遇》 8 《复杂——诞生于混沌与秩序边缘的科学》 9 《心智社会——从细胞到人工智能，人类思维的优雅解读》 10 《科学的极致——漫谈人工智能》 机器学习和人工智能书籍 1 《Hadoop深度学习》 2 《机器学习的实践应用》 3 《智能的本质》 4 《人工智能》 5 《Python机器学习经典案例》 6 《精通数据科学》 7 《图解深度学习》 8 《Python深度学习》 9 《深度学习与TensorFlow实战》 10 《python数据分析与应用》 大数据学习之路 语言基础 需要会使用shell脚本、java和sacala（这俩语言主要是用于日常代码和阅读源代码） 工具 IDE如eclipse或idea，虚拟机和SercureCRT连接工具 书籍 《Hadoop权威指南》 《Hadoop YARN权威指南》 《SPark快速大数据分析》 《从Paxos到zookeeper分布式一致性原则与实践》 《Hive编程指南》 进阶 阅读官方文档（帮你了解它都能做什么）、 源代码（帮你了解它是如何做的） 《预测分析与数据挖掘》 《THINK BIGGER企业的大数据战略》 《文本上的算法》 《Java机器学习》 《机器学习、大数据分析和可视化》 学习机器学习的最佳路线图： 1 搞定Python。千万不要一直在钻研python，语言只是工具，边练边写学、边练边用，快速掌握基本语法才是王道。 2 机器学习算法。机器学习有很多经典算法，从简单的算法开始，用python实现并流程的角度熟悉原理。 3 熟悉Python库。想达到熟悉程度难度较大，可在实际运营的时候再查一遍。 4 案例与实战。用真实数据来玩算法是学习的最好方式。先搞懂算法的原理，再把数据应用进去，然后就是一步一步debug完成整个项目。 总结 机器学习要想做得好，需要走好三大步： 1、 建模。 如何找一系列函数来实现预期的功能，这是建模问题。 2、 评价。如何找出一组合理的评价标准，来评估函数的好坏，这是评价问题。 3、 优化。如何快速找到性能最佳的函数，这是优化问题。 机器学习书籍推荐 1 《机器学习》 （俗称西瓜书） 2 《统计学习方法》 3 《机器学习实用案例解析》 4 《机器学习实战》 5 《机器学习实践指南案例应用解析》]]></content>
+      <categories>
+        <category>资源帖</category>
+      </categories>
+      <tags>
+        <tag>2019书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[期刊论文URL]]></title>
+    <url>%2F2019%2F03%2F10%2FOther-%E6%9C%9F%E5%88%8A%E8%AE%BA%E6%96%87URL%2F</url>
+    <content type="text"><![CDATA[期刊论文URL国外 1、国外大林免费电子书 http://manybooks.net 2、世界最大教育资源数据库 http://www.eric.ed.gov 3、国际性期刊 http://onlinelibrary.wiley.com 4、加拿大1300+图书馆学位论文 http://www.collectionscanada.gc.ca/thesescanda/index-e.html 5、澳洲40多所大学硕博论文 http://adt.caul.edu.au 6、北卡罗免费硕博论文 http://www.lib.ncsu.edu/ETD-db/ETD-search/search 7、宾西法尼亚大学电子论文库 http://etda.libraryes.psu.edu/ETD-db/ETD-search/search 8、伍斯特工学院学位论文 http://www.wpi.edu/Pubs/ETD/ 9、俄亥俄州立大学电子学位论文 http://www.ohiolink.edu/etd/search.cgi 10、美国秘密根大学论文库 http://deepblue.lib.umich.edu 11、开放存取资源图书馆 http://www.oalib.com 12、发展中国家出版的高质量期刊 http://www.bioline.org.br 13、美国斯坦福大学著名的学术出版商 HighWire http://highwire.stanford.edu/lists/freeart.dtl 14、美国科学院院报（世界上被引用此书最多的综合学科刊物之一， 继Nature、Science之后，在SCI综合学科类排名第三位） http://www.pnas.org 15、科研出版社OA资源 http://www.scirp.org 16、加拿大国家研究委员会(NRC) OA期刊 http://www.nrcresearchpress.com 17、Socolar(整理了世界上最重要的OA期刊1万多种和1000多种的OA仓贮资源) http://www.socolar.com 18、加利福尼亚大学国际和区域数字馆藏 http://repositories.cdlib.org/escholarship 19、剑桥大学机构知识库（剑桥大学党国期刊、学术论文、学位论文等） http://www.dspace.cam.ac.uk 20、Energy Citations Database(提供美国能源部的科技信息摘要) http://www.osti.gov/energycitations 21、世界数字图书馆 http://www.wdl.org/zh 中文 1、中国在线（提供3600种国外期刊的查阅服务） http://cnplinker.cnpeak.com 2、中国学术会议在线（教育部主办的学术会议资源分享平台） http://www.meeting.edu.cn/meeting 3、中国科技论文在线精品论文（自然科学领域） http://highlights.paper.edu.cn 4、国家图书馆馆藏中文图书数字卡资源 http://mylib.nlc.cn/web/guest/zhongwentushu 5、汉斯出版社中文学术期刊 http://www.hanspub.org 6、国家科技图书文献中心(现有期刊资源6908本，会议资源1506个） http://www.nstl.gov.cn 7、中国科学院学位论文数据库（免费文摘） http://ciencechina.cn/paper/search_pap.jsp 8、国家科技图书文献中心的中文学位论文数据库（免费文摘） http://www.nstl.gov.cn/NSTL/ 9、CALIS高校学位论文库（免费文摘） http://opac.calis.edu.cn]]></content>
+      <categories>
+        <category>资源帖</category>
+      </categories>
+      <tags>
+        <tag>期刊论文URL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C++ 11 主要的新语言特性]]></title>
+    <url>%2F2019%2F03%2F10%2FC-C-11-%E4%B8%BB%E8%A6%81%E7%9A%84%E6%96%B0%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[C++ 11 主要的新语言特性VA_ARGS ：仅能出现在可变参数宏中的替换列表中，e.g:123456#define LOG(...)\&#123;\ char szBuf[2048] = &#123; 0 &#125;;\ sprintf_s(szBuf, sizeof(szBuf), __VA_ARGS__);\ cout&lt;&lt;szBuf&lt;&lt;endl;\&#125; 12345678910111213141516171819class Empty&#123;public: Empty(void) &#123;&#125;//缺省默认构造函数 ~Empty(void)&#123;&#125;//缺省默认析构函数 Empty(const Empty&amp; obj)&#123;//拷贝构造函数 *this = obj; &#125; Empty&amp; operator=(const Empty&amp;obj) &#123;//赋值运算符 *this = obj; return *this; &#125; Empty* operator&amp;() &#123;//取址运算符 return this; &#125; const Empty* operator&amp;()const &#123;//取址运算符const return this; &#125;&#125;; 在C++11的程序中，所有的值必属于左值、将亡值、纯右值三者之一。]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++ 11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[征信报告查询地址]]></title>
+    <url>%2F2019%2F03%2F10%2FOther-%E5%BE%81%E4%BF%A1%E6%8A%A5%E5%91%8A%E6%9F%A5%E8%AF%A2%E5%9C%B0%E5%9D%80%2F</url>
+    <content type="text"><![CDATA[征信报告12处查询网点： 1.中国人民银行征信中心北京分中心(柜台查询/自助查询) 地址：西城区月坛北街26号恒华国际商务中心A座907 电话：68559206 2.北银消费金融公司(柜台查询) 地址：海淀区中关村大街22号中科大厦B座一层 电话：62521036 3.北京农商银行京粮支行(柜台查询/自助查询) 地址：朝阳区东三环中路16号京粮大厦一层 电话：51672305/51672306 4.北京农商银行大望路支行(自助查询) 地址：朝阳区西大望路15号院3号楼一层 电话：87723906 5.北京农商银行朝阳支行望京分理处(自助查询) 地址：朝阳区南湖中园130号 电话：64759036 6.北京农商银行黄村支行(自助查询) 地址：大兴区黄村兴华路216号 电话：69266642 7.北京农商银行丰台支行营业部(自助查询) 地址：丰台区西局南街101号 电话：63842592 8.北京农商银行石景山支行营业部(自助查询) 地址：石景山区杨庄东路78号 电话：88707930 9.北京农商银行通州支行(自助查询) 地址：通州区梨园北街63、65号 电话：69540796 10.浦发银行雅宝路支行(自助查询) 地址：东城区建国门北大街8号华润大厦一层 电话：85192337 11.浦发银行经济技术开发区支行(自助查询) 地址：大兴区天华路天华园二里二区19号楼大雄商业中心1层 电话：67890778 12.浦发银行慧忠支行(自助查询) 地址：朝阳区慧忠北里214号中奥华美达酒店一层 电话：64877966北京助力融通信息技术有限公司]]></content>
+      <categories>
+        <category>资源帖</category>
+      </categories>
+      <tags>
+        <tag>征信报告查询网点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[网文摘抄]]></title>
+    <url>%2F2019%2F03%2F10%2FOther-%E7%BD%91%E6%96%87%E6%91%98%E6%8A%84%2F</url>
+    <content type="text"><![CDATA[##逢人只说三分话，不可全抛一片心！ 酒剑仙御剑乘风来，除魔天地间，有酒乐逍遥，无酒我亦癫。一饮尽江河，再饮吞日月，千杯醉不倒，唯我酒剑仙。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——酒剑仙 《仙剑奇侠传》]]></content>
+      <categories>
+        <category>摘抄</category>
+      </categories>
+      <tags>
+        <tag>网文摘抄</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySql]]></title>
+    <url>%2F2019%2F02%2F13%2FMySql-MySql%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[linux 常用命令]]></title>
+    <url>%2F2019%2F01%2F29%2Flinux-linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[linux 常用命令 从windows给linux上传文件： rz + 文件 从Linux上下载文件： sz + 文件]]></content>
+      <categories>
+        <category>server</category>
+      </categories>
+      <tags>
+        <tag>linux 常用命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[28-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-28-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[28-Hadoop深入 HDFS原理]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[27-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-27-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[27-Hadoop深入 HDFS原理]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[26-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-26-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[26-Hadoop深入 HDFS原理 DataNode启动后向NameNode注册，注册后会周期性（1小时）向NameNode上报块信息（BlockReport）BlockReport数据内容： Block块与DataNode节点的映射关系（第二映射关系） DataNode周期性的发送心跳（3s）给NameNode,心跳返回结果带有NameNode下发给DataNode的命令。如果超过10m,NameNode没有收到DataNode的心跳，则认为该节点不可用。]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[25-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-25-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[25-Hadoop深入 HDFS原理DataNode 数据存储在hdfs-site.xml的dfs.datanode.data.dir属性配置中 存储内容： 数据本身数据的长度、校验和 和 时间戳。 文件块（block）：基本的存储单元，默认大小是128M，通过dfs.blocksize属性配置 副本策略： 默认是3个，通过dfs.replication属性配置 第一个block副本放在和client所在的node里（如果client不在集群范围内，则这第一个的node是随机选取的，当然系统会尝试不选择那些太满或者太忙的node） 第二个副本放在与第一个节点不同机架的node中（随机选择） 第三个副本和第二个在同一个机架，随机放在不同的node中。如何还有更多的副本，就随机放在集群的node里。]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[24-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-24-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[24-Hadoop深入 HDFS原理1、HDFS原理 1&gt;三大组件 NameNode、DataNode、SecondaryNameNode 2&gt;NameNode a.作用存储元数据（文件名、创建时间、大小、权限、文件与block块映射关系） 3&gt;DataNode a.作用存储真实的数据信息 4&gt;SecondaryNameNode a.作用减去NameNode压力，将edits编辑日志文件和fsimage镜像文件进行合并。 数据存储在hdfs-site.xml的dfs.namenode.name.dir属性配置中 1.fsimage:镜像文件，存储某时段内元数据信息和文件与Block块的映射关系（NameNode第一映射关系） 2.edits：编辑日志文件 3.seen_txid操作事务id 4.VERSION:存储命名空间ID、集群ID等信息多次格式化namenode的问题原因解释 hdfs格式化会改变VERSION文件中的clusterID,首次格式化时datanode和namenode会产生相同的clusterID;如果重新执行格式化，namenode的clusterID改变，就会与datanode的clusterID不一致，如果重新启动或读写hdfs就会挂掉。]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[23-Hadoop深入 课程大纲]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-23-Hadoop%E6%B7%B1%E5%85%A5-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2%2F</url>
+    <content type="text"><![CDATA[Hadoop深入 课程大纲 1、HDFS原理 2、HDFS命令行及Java API使用 3、YARN资源调度与隔离 4、MapRduce原理与实践 5、Shuffle流程]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[22-历史服务器]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-22-%E5%8E%86%E5%8F%B2%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[历史服务器 mapreduce.jobhistory.address jobhistory的rpc访问地址 mapreduce.jobhistory.webapp.address jobhistory的http访问地址 启动sbin/mr-jobhistory-daemon.sh start historyserver WEB UIhttp://&lt;主机名&gt;:19888 停止sbin/mr-jobhistory-daemon.sh stop historyserver]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[20、21-初识MapReduce]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-20-%E5%88%9D%E8%AF%86MapReduce%2F</url>
+    <content type="text"><![CDATA[20、21-初识MapReduce WordCount程序 bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.x.x.jar wordcount WEB UI 监控 节点状况 MapReduce Application状况 Container分配状况 启动Hadoop服务器 sbin/start-all.sh 浏览器访问 各个指标a.Cluster Metrics 集群指标：app(提交、排队、运行、完成）、Container个数、资源（内存、cpu)b.Cluster Nodes Metrics 及其状态： active、 decommissioning、decommissioned、lost、unhealthy\rebootc.dr.who用户的指标 dr.who用户：通过浏览器访问访问默认使用dr.who 的用户 聚合日志a.含义： I.分布式计算作业放到Nodemanager运行，日志信息放在NodeManager本地目录 yarn.nodemanager.log-dirs: ${yarn.log.dir}/userlogsII.通过配置将本地日志放到HDFS服务器上，即聚合日志的概念 b.配置+ yarn.log-aggregation-enable 是否启用日志聚合功能，日志聚合开启后保存到HDFS上 + yarn.log-aggregation.retain-seconds 聚合后的日志在HDFS上保存多长时间，单位为s + yarn.log-aggregation.retain-check-interval-seconds 删除任务在HDFS上执行的间隔，执行时候讲满足条件的日志删除（超过保存时间的日志），如果是0或者负数，则为参数2设置为1/10 + yarn.nodemanager.log.retain-seconds 当不启用日志聚合此参数生效，日志文件保存在本地的时间，单位为s + yarn.nodemanager.remote-app-log-dir 当应用程序运行结束后，日志被转移到的HDFS目录（启用日志聚集功能时有效），修改为保存的日志文件夹 + yarn.nodemanager.remote-app-log-dir-suffix 远程日志目录子目录名称（启用日志聚集功能时有效）]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[19-ssh登录]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-19-ssh%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[SSH免密码登录 生成公钥/私钥对 ssh-keygen -t rsa 拷贝公钥至远程主机或本机authorized_keys文件 ssh-copy-id &lt;主机名&gt;]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[17-ntp服务器同步时间]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-17-ntp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8C%E6%AD%A5%2F</url>
+    <content type="text"><![CDATA[17-ntp服务器同步时间分布式环境(distributed) ntp服务器同步时间 1&gt; 作用 同步三个服务器的时间，让服务器一致 2&gt; 机器1上配置ntp时间服务器 12345678910111213141516171819202122232425262728 vim /etc/sysconfig/ntpd SYNC_HWCLOCK=yes vim /etc/ntp.conf #server xxx server 127.127.1.0 fudge 127.127.1.0 stratum 10 restrict 192.168.160.0 xxxx ``` - 3&gt; 机器1重启ntp服务器 service ntpd restart - 4&gt; 机器1设置时间 date -s yyyy-MM-dd date -s HH:mm:ss - 5&gt;机器2/3 同步时间 手工同步： /usr/sbin/ntpdate &lt;主机名&gt; 定时同步： crontab -e :0-59/10****/usr/sbin/ntpdate &lt;主机名&gt; 注： crontab格式： 分 小时 天 月 周 &lt;command&gt;/etc/sysconfig/ntpd文件添加SYNC_HWCLOCK = yes/etc/ntp.conf 文件配置取消注释：//修改为统一网段 restrict 192.168.139.0 mask 255.255.255.0 nomodify notrap server 127.127.1.0 #local clock fudge 127.127.1.0 stratum 10`]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[18-hadoop分布式配置]]></title>
+    <url>%2F2019%2F01%2F28%2FHadoop-18-hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[18-hadoop分布式配置 分布式环境（Distributed) + 配置yarn-site.xml 文件 &lt;property&gt; &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt; &lt;value&gt;master&lt;/value&gt; &lt;/property&gt; + 配置$HADOOP_HOME/etc/hadoop/slaves文件 hadoop-senior01.test.com hadoop-senior02.test.com hadoop-senior03.test.com]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[30-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F27%2FHadoop-30-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[30-Hadoop深入 HDFS原理]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[29-Hadoop深入 HDFS原理]]></title>
+    <url>%2F2019%2F01%2F27%2FHadoop-29-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[29-Hadoop深入 HDFS原理]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[15、16-hadoop安装配置 分布式环境]]></title>
+    <url>%2F2019%2F01%2F26%2FHadoop-15-hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-%E5%88%86%E5%B8%83%E5%BC%8F%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[15、16 -hadoop安装配置 分布式环境 分布式环境（多个服务器运行hadoop的多个进程）]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[13-hadoop安装配置 单机模式]]></title>
+    <url>%2F2019%2F01%2F26%2FHadoop-13-hadoop%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE-%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[13、14 -hadoop安装配置（单机模式、伪分布式模式） 单机模式（standalone) 仅适用于单机运行分布式计算作业，直接指向mapreduce-examples.jar案例 1234mkdir inputcp etc/hadoop/*.xml inputbin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0-cdh5.9.0.jar grep input output &apos;dfs[a-z.]+&apos;cat output/* 伪分布式模式 一个服务器上运行多个进程。一、HDFS 1&gt; 配置 etc/hadoop/core-site.xml 123456&lt;configuration&gt; &lt;property&gt; &lt;name&gt;fs.defaultFS&lt;/name&gt; &lt;value&gt;hdfs://localhost:9000&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; - 2&gt; 配置 etc/hadoop/hdfs-site.xml 123456&lt;configuration&gt; &lt;property&gt; &lt;name&gt;fs.replication&lt;/name&gt; &lt;value&gt;1&lt;/value&gt; &lt;/property&gt;&lt;/configuration&gt; - 3&gt; 格式化NameNode 作用：清空NameNode目录下的所有数据，生成目录结构，初始化一些信息到文件中。 - 4&gt; 启动HDFS各个进程 12345sbin/start-dfs.sh 或sbin/hadoop-daemon.sh start namenodesbin/hadoop-daemon.sh start datanodesbin/hadoop-daemon.sh start secondarynamenode - 5&gt;浏览器访问 http://&lt;主机名&gt;:50070 注： 50070是http协议的端口号；8020是RPC tcp协议的端口号 二、YARN - 1&gt;配置mapred-site.xml - 2&gt;配置yarn-site.xml - 3&gt;启动YARN进程 ResourceManager、NodeManager 1234sbin/start-yarn.sh或sbin/yarn-daemon.sh start resourcemanagersbin/yarn-daemon.sh satrt nodemanager - 4&gt; 浏览器访问 http://&lt;主机名&gt;:8088 注：8032是RPC tcp协议的端口号；8088 是http协议的端口号]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[12-hadoop环境搭建]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-12-hadoop%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[hadoop 环境搭建 三个环境 单机 伪分布式 分布式 三个分支 apache 版本（Apache 基金会） cdh 版本(cloudera 公司） hdp 版本(HortOnWorks 公司) 部署环境服务器： VMWare 虚拟机、Centos 6.4 系统客户端： xShell 配置 a.设置静态 IP 图形化界面 命令行 12vim /etc/sysconfig/network-scripts/ifcfg-th0service network restart b.设置主机名 暂时性 永久性 c.主机名与 IP 映射 12vim /etc/sysconfig/networkservice newwork restart 单机环境（Standalone) 123mkdir inputcp etc/hadoop/*.xml inputbin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0-cdh5.9.0.jar grep input output &apos;dfs[a-z]&apos;]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[11-hadoop生态系统]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-11-hadoop%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[hadoop 生态系统 Hadoop:分布式存储、分布式计算、资源调度与任务管理hdfs、mapreduce、yarn、common Lucene: 索引检索工具包 Nutch:开源的搜索引擎 HBase/Cassandra: 基于谷歌的 BigTablek 开源的列式存储的非关系型数据库 Hive: 基于 SQL 的分布式计算引擎，也是一个数据仓库Pig：基于 Pig Lation 脚本的计算引擎 Thrift/Avro: PRC 框架，用于网络通信 BigTop: 项目测试、打包、部署 Oozie/Azakban: 大数据的工作流框架 Chukwa/Scribe/Flume: 数据收集框架 Whirr:部署为云服务的类库 sqoop:数据迁移工具 Zookeeper:分布式协调服务框架 HAMA：图计算框架 Mahout:机器学习框架 图示]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[10-MapReduce执行流程]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-10-MapReduce%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[MapReduce 概述 将计算过程分为两个阶段：Map 和 ReduceMap 阶段并行处理输入数据Reduce 阶段对 Map 结果进行汇总 Shuffle 连接 Map 和 Reduce 两个阶段Map Task 将数据写入到本地磁盘Reduce Task 从每个 Map Task 上读取一份数据 仅适合离线批处理具有很好的容错性和扩展性适合简单的批处理任务 缺点明显系统开销大、过多使用磁盘导致效率低下等 MapReduce 执行过程]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[9-YARN各组件作用]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-9-YARN%E5%90%84%E7%BB%84%E4%BB%B6%E4%BD%9C%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[YARN 各组件作用 ResourceManageer 处理客户端请求 启动/监控 ApplicationMaster 监控 NodeManager 资源分配与调度 ApplicationMaster 程序切分 为应用程序申请资源 任务监控与容错 NodeManage 单个节点上的资源管理 处理来自 ReousrceManger 的命令 处理来自 ApplicationMaster 的命令 Container 对任务运行环境的抽象，封装了 CPU、内存等多维资源以及环境变量、启动命令等任务运行香港的信息]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[8-YARN执行流程]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-8-YARN%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[YARN: 资源调度、任务管理YARN中四大组件 ResourceManager(RM)、 NodeManager(NM)、 ApplicationMaster(AM)、 Container YARN执行流程 1&gt;client连接RM提交作业，RM给client一个JobId（注： ApplicationsManager 和 ResourceSchedular)。 2&gt;RM中的的ApplicationManager连接一个NM,让NM创建一个AM用于处理客户端作业请求。 3&gt;AM连接RM中ApplicationsManager申请NodeManager。 4&gt;AM去取ResourceScheduler给client的作业申请资源（CPU、内存、磁盘、网络）。 5&gt;AM连接NM,发送client job作业程序和申请的资源（CPU、内存、磁盘、网络）。 6&gt;NM启动container进程运行不同job的不同任务。 7&gt;container进程运行状态实时反馈给AM。 8&gt;AM反馈任务状态给RM中的ApplictaionManager。 9&gt;client端可以连接RM或AM查询job的执行情况。 注： NM启动后去RM上进行注册，会不断发送心跳，说明处于存活状态。]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[7-YARN引入案例]]></title>
+    <url>%2F2019%2F01%2F14%2FHadoop-7-YARN%E5%BC%95%E5%85%A5%E6%A1%88%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[YARN 引入案例为了便于理解 YARN 的执行流程，故引入一个案例方便理解：]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[6-YARN四大组件]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-6-YARN%E5%9B%9B%E5%A4%A7%E7%BB%84%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[YARN 作用负责资源调度与任务管理 YARN 架构图]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[5-hdfs系统架构与组件功能]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-5-hdfs%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E4%B8%8E%E7%BB%84%E4%BB%B6%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[HDFS 的架构图 HDFS 组件 NameNode：为主节点，存储文件元数据，如 文件名、文件目录、文件属性（生成时间、大小等），以及每个文件的块列表和块所在的 DataNode 等。 DataNode: 在本地文件系统存储文件块数据，以及块数据的校验和。 SecondaryNameNode: 用于监控 HDFS 状态的辅助后台程序，每隔一段时间获取 HDFS 元数据的快照。]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[4-hdfs的引入]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-4-hdfs%E7%9A%84%E5%BC%95%E5%85%A5%2F</url>
+    <content type="text"><![CDATA[HDFS(Hadoop Destribute File System) 分布式文件系统a.文件系统：文件管理 + block 块管理 单机文件系统：windows: FAT16、 FAT32 …linux: EXT2/3/4、VFS 分布式文件系统多个服务器共同存储文件 搜索引擎存储文件示例图 HDFS 示例图在搜索引擎存储架构基础上提取出 driver 大管家中的公共部分，就基本得到 hfdfs 的架构下面是 HDFS 的文件系统图]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[3-hadoop四大模块]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-3-hadoop%E5%9B%9B%E5%A4%A7%E6%A8%A1%E5%9D%97%2F</url>
+    <content type="text"><![CDATA[hadoop 四大模块 Hadoop common为其他 Hadoop 模块提供 RPC 功能 Hadoop HDFS高可靠、高存储的分布式文件存储系统 Hadoop MapReduce一个分布式离线并行计算框架 Hadoop YARN任务调度与资源管理 Hadoop 0.x/1.x 系统框架图 Hadoop 2.x 系统框架图]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2-hadoop前世今生]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-2-hadoop%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%2F</url>
+    <content type="text"><![CDATA[1. Hadoop 的前世今生&nbsp;搜索引擎： 网络爬虫+索引服务器（生成索引 + 检索）hadoop 如何解决下面两个问题： 分布式数据如何存储？ 分布式如何进行计算？]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1 课程简介]]></title>
+    <url>%2F2019%2F01%2F13%2FHadoop-1-%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B%2F</url>
+    <content type="text"><![CDATA[参看视频教程 大数据 Hadoop 基础入门到高级精通课程大纲 课程简介 hadoop 前世今生 hadoop 四大模块 hdfs 引入 hdfs 系统架构与组件功能 YARN 四大组件 YARN 引入案例 YARN 执行流程 YARN 组件作用 MapReduce 执行流程 Hadoop 生态系统 环境准备 单机环境 伪分布式(一) 伪分布式(二) 分布式环境准备 ntp 服务器同步时间 Hadoop 分布式配置 SSH 免密码登录及启动 Hadoop MapReduce 案例运行及指标说明 聚合日志 历史服务器 Hadoop 深入课程简介 NameNode 数据存储 DataNode 数据存储及副本策略 DataNode 与 NameNode 通信 SecondaryNameNode 执行流程 HDFS 写入流程 HDFS 读取流程 安全模式 HDFS 命令行操作（一） HDFS 命令行操作（二） HDFS 管理命令 HDFS Java API 获取 FileSystem 创建目录 创建文件 上传文件 获取文件或目录的元数据信息 下载文件 删除文件 YARN 三种调度器 Capacity Scheduler 配置 Capacity Scheduler 运行 Fair Scheduler 配置 Fair Scheduler 运行 YARN 资源隔离 MapReduce 执行流程 WordCount 案例（一） WordCount 案例（二） windows 单机环境运行案例 windows 远程调用运行 打 jar 包放到 hadoop 集群运行 InputFormat 功能及子类 生成 sequenceFile 文件 sequenceFileInputFormat 使用 sequcenFileInputFormat 运行 InputSplit 原理 InputFormat 功能分析 reduce 个数 OutputFormat 功能及子类 Partitioner 分区器 Shuffle 整体流程 Shuffle 写入流程 Shuffle 读取流程 Hadoop 高级课程简介 去重排序 每年最高气温 每年最高气温(二) 单表关联(分析) 单表关联(Map) 单表关联(Reduce) 单表关系(运行) reduceJoin 多表关联(分析) reduceJoin 多表关联(map) reduceJoin 多表关联(reduce) reduceJoin 多表关联(运行) join 数据倾斜处理方案 mapJoin 原理 mapJoin 实现(一) mapJoin 实现(二) mapJoin 实现(三) TopN 分析 TopN 实现(一) TopN 实现(二)]]></content>
+      <categories>
+        <category>hadoop</category>
+      </categories>
+      <tags>
+        <tag>大数据Hadoop基础入门到高级精通</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019,To Self]]></title>
+    <url>%2F2019%2F01%2F12%2Findex%2F</url>
+    <content type="text"><![CDATA[new cplayer({ element: document.getElementById('mplayer8658'), playlist: [ { src: 'https://img.wshunli.com/about/阿婆说.mp3', poster: 'https://img.wshunli.com/about/阿婆说.jpg', name: '阿婆说', artist: '陈一发儿', lyric: '[00:03.85]阿婆说-陈一发儿\n[00:04.86]作曲:暗杠\n[00:05.29]作词:暗杠/古道背棺人\n[00:05.81]编曲：暗杠\n[00:06.25]器乐演奏：暗杠\n[00:06.73]和声编配：暗杠\n[00:07.30]混音后期：A.Q.Studio\n[00:16.33]囡囡呀不要调皮\n[00:19.15]坐下听听阿婆说\n[00:23.12]这个季节天气转凉地上雨水多\n[00:30.17]囡囡呀不要惊慌\n[00:33.13]过来听听阿婆说\n[00:36.91]睡个觉雷声过后就能看云朵\n[00:44.58]囡囡别怕\n[00:46.26]囡囡别哭\n[00:47.84]快快睡咯\n[00:51.23]你静静听首歌\n[00:58.51]蛐蛐轻些\n[00:59.94]静静安歇\n[01:01.73]月儿圆哟\n[01:05.02]你乖乖呀抱阿婆\n[01:11.93]风铃呀轻响鸟儿轻唱远处谁在和\n[01:18.75]亲了彩虹惊了云朵\n[01:21.81]我已成归客\n[01:25.88]囡囡呀你会长大会走很远会觉得累了\n[01:33.02]只要记得河婆话“阿婆”怎么说\n[02:07.56]囡囡呀你会困惑\n[02:10.65]慢些脚步别忘了\n[02:14.39]慢慢的你会明白丢了是什么\n[02:21.46]人生路本就是场获得与失的选择\n[02:28.14]迷路时想想当年阿婆怎么说\n[02:35.85]回头看看\n[02:37.46]雨水过后\n[02:39.26]云彩很多\n[02:42.49]来吧阿婆帮你偷偷摘一朵\n[02:49.67]等你老了\n[02:51.29]阿婆走了\n[02:53.09]你要记得\n[02:56.64]把这乡音教会娃儿怎么说\n[03:03.66]把这乡音教给你的囡囡哟\n[03:38.37]回头看看\n[03:40.11]雨水过后\n[03:41.75]少了冷漠\n[03:45.09]来吧阿婆等你还在那村落' } ], autoplay: true, volume: 0.75, big: true, dark: true }) 建立该博客目有下面几点吧: 新年伊始，督促自己制订学习目标、按时执行学习计划，并真正的达到自己的预期效果。 记录些内容，便于后期翻阅查找；或许某些问题的解决方法可以帮到网络上的陌生人吧。 给自己的 github 加（zhuang)点(bi)料，怎么着也是工作好些年的人了哈…… 当前状态结合当前工作内容，学习腾讯课堂免费视频大数据 Hadoop 基础入门到高级精通]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>life</tag>
+      </tags>
+  </entry>
+</search>

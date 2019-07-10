@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Open the window</title>
+  
+  <subtitle>Keep It Simple,Stupid.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://allansmithx.github.io/"/>
+  <updated>2019-04-15T03:08:26.131Z</updated>
+  <id>https://allansmithx.github.io/</id>
+  
+  <author>
+    <name>AllanSmithX</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaSE</title>
+    <link href="https://allansmithx.github.io/2019/04/02/JavaSE-JavaSE-JavaSE/"/>
+    <id>https://allansmithx.github.io/2019/04/02/JavaSE-JavaSE-JavaSE/</id>
+    <published>2019-04-02T06:03:25.000Z</published>
+    <updated>2019-04-15T03:08:26.131Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="java基础知识笔记"><a href="#java基础知识笔记" class="headerlink" title="java基础知识笔记"></a>java基础知识笔记</h2><ul><li>java中定义变量格式报错： float f = 1999.99； 因为默认的浮点为double类型，这样会丢失精度，编译报错！需强制转换</li><li>语句System.out.println(1+2+”java”+3+4)输出的结果是 3java34</li><li>java中每种数据类型都是固定大小，故生成的程序不区分32位和64位。</li><li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  // Java中break配合标记可以跳出**外层**for循环</span><br><span class="line">  import java.util.Random;</span><br><span class="line">  public class Hello&#123;</span><br><span class="line">  public static void main(String[] args) &#123;</span><br><span class="line">int i, j;  </span><br><span class="line">itcast: for (i = 1; i &lt;= 9; i++) &#123;  </span><br><span class="line">for (j = 1; j &lt;= i; j++) &#123;  </span><br><span class="line">if (i &gt; 2) &#123;  </span><br><span class="line">                  System.out.print(&quot;break\n&quot;); </span><br><span class="line">break itcast;  </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">   System.out.print(&quot;#\n&quot;); </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li><li><p>在Java中定义时类的修饰符可以有 public、default（缺省）、protected、private,<br>[为何Java在定义时需要类的修饰符啊？C++中定义类时不需要]</p></li><li>在Java中，类只支持单继承，不允许多继承，也就是说一个类只能有一个直接父类。</li><li><p>在子类中，访问父类中的成员变量格式：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super.父类中的成员变量</span><br></pre></td></tr></table></figure></li><li><p>抽象方法定义的格式：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public abstract 返回值类型 方法名(参数);</span><br></pre></td></tr></table></figure></li><li><p>抽象类定义的格式：</p>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abstract class 类名 &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><h1 id="抽象类的细节问题"><a href="#抽象类的细节问题" class="headerlink" title="抽象类的细节问题"></a>抽象类的细节问题</h1><ul><li>1、抽象类一定是个父类？<br>  是的，因为不断抽取而来的。</li><li>2、抽象类中是否可以不定义抽象方法？<br>  是可以的，那这个抽象类的存在到底有什么意义呢？不让该类创建对象,方法可以直接让子类去使用</li><li>3、抽象关键字abstract不可以和哪些关键字共存？    <ul><li>1、private：私有的方法子类是无法继承到的，也不存在覆盖，而abstract和private一起使用修饰方法，abstract既要子类去实现这个方法，而private修饰子类根本无法得到父类这个方法。互相矛盾。</li><li>2、final，暂时不关注，后面学</li><li>3、static，暂时不关注，后面学</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;java基础知识笔记&quot;&gt;&lt;a href=&quot;#java基础知识笔记&quot; class=&quot;headerlink&quot; title=&quot;java基础知识笔记&quot;&gt;&lt;/a&gt;java基础知识笔记&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;java中定义变量格式报错： float f = 1999.99
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://allansmithx.github.io/categories/Java/"/>
+    
+    
+      <category term="JavaSE" scheme="https://allansmithx.github.io/tags/JavaSE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019书单</title>
+    <link href="https://allansmithx.github.io/2019/03/10/Other-2019%E4%B9%A6%E5%8D%95/"/>
+    <id>https://allansmithx.github.io/2019/03/10/Other-2019书单/</id>
+    <published>2019-03-10T06:15:36.000Z</published>
+    <updated>2019-03-10T06:46:11.980Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2019书单"><a href="#2019书单" class="headerlink" title="2019书单"></a>2019书单</h1><ul><li>《thinking in UML》     </li><li>《大话设计模式》    </li><li>《TCP/IP详解 卷1：协议》     </li><li>《TCP/IP详解 卷2：实现》 </li><li>《TCP/IP详解 卷3：TCP事务协议、HTTP、NNTP和Unix域协议》 </li><li>《深入理解Linux内核》     </li><li>《windows核心编程》    </li><li>python    </li><li></li><li>1    《代码大全》    </li><li>2    《程序员修炼之道》    </li><li>3    《计算机程序设计与解释》</li><li></li><li>4    《C程序设计语言》    </li><li>5    《算法导论》    </li><li>6    《重构：改善既有代码的设计》</li><li></li><li>7    《人月神话》    </li><li>8    《计算机程序设计艺术》    </li><li>9    《代码整洁之道》    </li><li>10    《编程人生》    </li><li>11    《编码：隐匿在计算机软硬件背后的语言》</li><li></li><li>1    《哥德尔、埃舍尔、巴赫——集异璧之大成》    </li><li>2    《终极算法》    </li><li>3    《人工智能时代》    </li><li>4    《走近2050——注意力、互联网与人工智能》    </li><li>5    《奇点临近》    </li><li>6    《情感机器》    </li><li>7    《图灵的大教堂——当人工智能之父与计算机之父相遇》    </li><li>8    《复杂——诞生于混沌与秩序边缘的科学》    </li><li>9    《心智社会——从细胞到人工智能，人类思维的优雅解读》    </li><li>10    《科学的极致——漫谈人工智能》    <h1 id="机器学习和人工智能书籍"><a href="#机器学习和人工智能书籍" class="headerlink" title="机器学习和人工智能书籍"></a>机器学习和人工智能书籍</h1></li><li>1    《Hadoop深度学习》    </li><li>2    《机器学习的实践应用》    </li><li>3    《智能的本质》    </li><li>4    《人工智能》    </li><li>5    《Python机器学习经典案例》    </li><li>6    《精通数据科学》    </li><li>7    《图解深度学习》    </li><li>8    《Python深度学习》    </li><li>9    《深度学习与TensorFlow实战》    </li><li>10    《python数据分析与应用》    <h1 id="大数据学习之路"><a href="#大数据学习之路" class="headerlink" title="大数据学习之路"></a>大数据学习之路</h1></li><li>语言基础    需要会使用shell脚本、java和sacala（这俩语言主要是用于日常代码和阅读源代码）    </li><li>工具    IDE如eclipse或idea，虚拟机和SercureCRT连接工具    </li><li>书籍    《Hadoop权威指南》    </li><li>《Hadoop YARN权威指南》    </li><li>《SPark快速大数据分析》    </li><li>《从Paxos到zookeeper分布式一致性原则与实践》    </li><li>《Hive编程指南》    </li><li>进阶    阅读官方文档（帮你了解它都能做什么）、</li><li>源代码（帮你了解它是如何做的）    </li><li>《预测分析与数据挖掘》    </li><li>《THINK BIGGER企业的大数据战略》    </li><li>《文本上的算法》    </li><li>《Java机器学习》    </li><li>《机器学习、大数据分析和可视化》    </li><li>学习机器学习的最佳路线图：</li><li>1    搞定Python。千万不要一直在钻研python，语言只是工具，边练边写学、边练边用，快速掌握基本语法才是王道。    </li><li>2    机器学习算法。机器学习有很多经典算法，从简单的算法开始，用python实现并流程的角度熟悉原理。    </li><li>3    熟悉Python库。想达到熟悉程度难度较大，可在实际运营的时候再查一遍。    </li><li>4    案例与实战。用真实数据来玩算法是学习的最好方式。先搞懂算法的原理，再把数据应用进去，然后就是一步一步debug完成整个项目。    </li><li>总结    机器学习要想做得好，需要走好三大步：    </li><li>1、    建模。 如何找一系列函数来实现预期的功能，这是建模问题。    </li><li>2、    评价。如何找出一组合理的评价标准，来评估函数的好坏，这是评价问题。    </li><li>3、    优化。如何快速找到性能最佳的函数，这是优化问题。    <h1 id="机器学习书籍推荐"><a href="#机器学习书籍推荐" class="headerlink" title="机器学习书籍推荐"></a>机器学习书籍推荐</h1></li><li>1    《机器学习》 （俗称西瓜书）    </li><li>2    《统计学习方法》    </li><li>3    《机器学习实用案例解析》    </li><li>4    《机器学习实战》    </li><li>5    《机器学习实践指南案例应用解析》    </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2019书单&quot;&gt;&lt;a href=&quot;#2019书单&quot; class=&quot;headerlink&quot; title=&quot;2019书单&quot;&gt;&lt;/a&gt;2019书单&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;《thinking in UML》     &lt;/li&gt;
+&lt;li&gt;《大话设计模式》    &lt;/li
+      
+    
+    </summary>
+    
+      <category term="资源帖" scheme="https://allansmithx.github.io/categories/%E8%B5%84%E6%BA%90%E5%B8%96/"/>
+    
+    
+      <category term="2019书单" scheme="https://allansmithx.github.io/tags/2019%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>期刊论文URL</title>
+    <link href="https://allansmithx.github.io/2019/03/10/Other-%E6%9C%9F%E5%88%8A%E8%AE%BA%E6%96%87URL/"/>
+    <id>https://allansmithx.github.io/2019/03/10/Other-期刊论文URL/</id>
+    <published>2019-03-10T05:43:57.000Z</published>
+    <updated>2019-03-10T06:05:31.288Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="期刊论文URL"><a href="#期刊论文URL" class="headerlink" title="期刊论文URL"></a>期刊论文URL</h2><p>国外 </p><ul><li>1、国外大林免费电子书       <a href="http://manybooks.net" target="_blank" rel="noopener">http://manybooks.net</a> </li><li>2、世界最大教育资源数据库   <a href="http://www.eric.ed.gov" target="_blank" rel="noopener">http://www.eric.ed.gov</a> </li><li>3、国际性期刊               <a href="http://onlinelibrary.wiley.com" target="_blank" rel="noopener">http://onlinelibrary.wiley.com</a> </li><li>4、加拿大1300+图书馆学位论文 <a href="http://www.collectionscanada.gc.ca/thesescanda/index-e.html" target="_blank" rel="noopener">http://www.collectionscanada.gc.ca/thesescanda/index-e.html</a> </li><li>5、澳洲40多所大学硕博论文    <a href="http://adt.caul.edu.au" target="_blank" rel="noopener">http://adt.caul.edu.au</a></li><li>6、北卡罗免费硕博论文        <a href="http://www.lib.ncsu.edu/ETD-db/ETD-search/search" target="_blank" rel="noopener">http://www.lib.ncsu.edu/ETD-db/ETD-search/search</a> </li><li>7、宾西法尼亚大学电子论文库  <a href="http://etda.libraryes.psu.edu/ETD-db/ETD-search/search" target="_blank" rel="noopener">http://etda.libraryes.psu.edu/ETD-db/ETD-search/search</a> </li><li>8、伍斯特工学院学位论文      <a href="http://www.wpi.edu/Pubs/ETD/" target="_blank" rel="noopener">http://www.wpi.edu/Pubs/ETD/</a> </li><li>9、俄亥俄州立大学电子学位论文 <a href="http://www.ohiolink.edu/etd/search.cgi" target="_blank" rel="noopener">http://www.ohiolink.edu/etd/search.cgi</a> </li><li>10、美国秘密根大学论文库 <a href="http://deepblue.lib.umich.edu" target="_blank" rel="noopener">http://deepblue.lib.umich.edu</a> </li><li>11、开放存取资源图书馆  <a href="http://www.oalib.com" target="_blank" rel="noopener">http://www.oalib.com</a> </li><li>12、发展中国家出版的高质量期刊 <a href="http://www.bioline.org.br" target="_blank" rel="noopener">http://www.bioline.org.br</a> </li><li>13、美国斯坦福大学著名的学术出版商 HighWire   <a href="http://highwire.stanford.edu/lists/freeart.dtl" target="_blank" rel="noopener">http://highwire.stanford.edu/lists/freeart.dtl</a> </li><li>14、美国科学院院报（世界上被引用此书最多的综合学科刊物之一， 继Nature、Science之后，在SCI综合学科类排名第三位）  <a href="http://www.pnas.org" target="_blank" rel="noopener">http://www.pnas.org</a> </li><li>15、科研出版社OA资源     <a href="http://www.scirp.org" target="_blank" rel="noopener">http://www.scirp.org</a>     </li><li>16、加拿大国家研究委员会(NRC) OA期刊     <a href="http://www.nrcresearchpress.com" target="_blank" rel="noopener">http://www.nrcresearchpress.com</a> </li><li>17、Socolar(整理了世界上最重要的OA期刊1万多种和1000多种的OA仓贮资源)     <a href="http://www.socolar.com" target="_blank" rel="noopener">http://www.socolar.com</a> </li><li>18、加利福尼亚大学国际和区域数字馆藏     <a href="http://repositories.cdlib.org/escholarship" target="_blank" rel="noopener">http://repositories.cdlib.org/escholarship</a> </li><li>19、剑桥大学机构知识库（剑桥大学党国期刊、学术论文、学位论文等） <a href="http://www.dspace.cam.ac.uk" target="_blank" rel="noopener">http://www.dspace.cam.ac.uk</a> </li><li>20、Energy Citations Database(提供美国能源部的科技信息摘要) <a href="http://www.osti.gov/energycitations" target="_blank" rel="noopener">http://www.osti.gov/energycitations</a> </li><li>21、世界数字图书馆  <a href="http://www.wdl.org/zh" target="_blank" rel="noopener">http://www.wdl.org/zh</a> </li></ul><p>中文</p><ul><li>1、中国在线（提供3600种国外期刊的查阅服务） <a href="http://cnplinker.cnpeak.com" target="_blank" rel="noopener">http://cnplinker.cnpeak.com</a> </li><li>2、中国学术会议在线（教育部主办的学术会议资源分享平台） <a href="http://www.meeting.edu.cn/meeting" target="_blank" rel="noopener">http://www.meeting.edu.cn/meeting</a> </li><li>3、中国科技论文在线精品论文（自然科学领域） <a href="http://highlights.paper.edu.cn" target="_blank" rel="noopener">http://highlights.paper.edu.cn</a> </li><li>4、国家图书馆馆藏中文图书数字卡资源  <a href="http://mylib.nlc.cn/web/guest/zhongwentushu" target="_blank" rel="noopener">http://mylib.nlc.cn/web/guest/zhongwentushu</a> </li><li>5、汉斯出版社中文学术期刊 <a href="http://www.hanspub.org" target="_blank" rel="noopener">http://www.hanspub.org</a> </li><li>6、国家科技图书文献中心(现有期刊资源6908本，会议资源1506个） <a href="http://www.nstl.gov.cn" target="_blank" rel="noopener">http://www.nstl.gov.cn</a> </li><li>7、中国科学院学位论文数据库（免费文摘） <a href="http://ciencechina.cn/paper/search_pap.jsp" target="_blank" rel="noopener">http://ciencechina.cn/paper/search_pap.jsp</a> </li><li>8、国家科技图书文献中心的中文学位论文数据库（免费文摘） <a href="http://www.nstl.gov.cn/NSTL/" target="_blank" rel="noopener">http://www.nstl.gov.cn/NSTL/</a> </li><li>9、CALIS高校学位论文库（免费文摘） <a href="http://opac.calis.edu.cn" target="_blank" rel="noopener">http://opac.calis.edu.cn</a> </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;期刊论文URL&quot;&gt;&lt;a href=&quot;#期刊论文URL&quot; class=&quot;headerlink&quot; title=&quot;期刊论文URL&quot;&gt;&lt;/a&gt;期刊论文URL&lt;/h2&gt;&lt;p&gt;国外 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1、国外大林免费电子书       &lt;a href=&quot;http:/
+      
+    
+    </summary>
+    
+      <category term="资源帖" scheme="https://allansmithx.github.io/categories/%E8%B5%84%E6%BA%90%E5%B8%96/"/>
+    
+    
+      <category term="期刊论文URL" scheme="https://allansmithx.github.io/tags/%E6%9C%9F%E5%88%8A%E8%AE%BA%E6%96%87URL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++ 11 主要的新语言特性</title>
+    <link href="https://allansmithx.github.io/2019/03/10/C-C-11-%E4%B8%BB%E8%A6%81%E7%9A%84%E6%96%B0%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/"/>
+    <id>https://allansmithx.github.io/2019/03/10/C-C-11-主要的新语言特性/</id>
+    <published>2019-03-10T04:51:37.000Z</published>
+    <updated>2019-07-06T03:45:05.387Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="C-11-主要的新语言特性"><a href="#C-11-主要的新语言特性" class="headerlink" title="C++ 11 主要的新语言特性"></a>C++ 11 主要的新语言特性</h2><p><strong>VA_ARGS</strong> ：仅能出现在可变参数宏中的替换列表中，e.g:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span>  LOG(...)\</span></span><br><span class="line">&#123;\</span><br><span class="line">              <span class="keyword">char</span> szBuf[<span class="number">2048</span>] = &#123; <span class="number">0</span> &#125;;\</span><br><span class="line">              sprintf_s(szBuf, <span class="keyword">sizeof</span>(szBuf), __VA_ARGS__);\</span><br><span class="line">              <span class="built_in">cout</span>&lt;&lt;szBuf&lt;&lt;<span class="built_in">endl</span>;\</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Empty</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">       Empty(<span class="keyword">void</span>) &#123;&#125;<span class="comment">//缺省默认构造函数</span></span><br><span class="line">       ~Empty(<span class="keyword">void</span>)&#123;&#125;<span class="comment">//缺省默认析构函数</span></span><br><span class="line">       Empty(<span class="keyword">const</span> Empty&amp; obj)&#123;<span class="comment">//拷贝构造函数</span></span><br><span class="line">              *<span class="keyword">this</span> = obj;</span><br><span class="line">       &#125;</span><br><span class="line">       Empty&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> Empty&amp;obj) &#123;<span class="comment">//赋值运算符</span></span><br><span class="line">              *<span class="keyword">this</span> = obj;</span><br><span class="line">              <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       Empty* <span class="keyword">operator</span>&amp;() &#123;<span class="comment">//取址运算符</span></span><br><span class="line">              <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">const</span> Empty* <span class="keyword">operator</span>&amp;()<span class="keyword">const</span> &#123;<span class="comment">//取址运算符const</span></span><br><span class="line">              <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>在C++11的程序中，所有的值必属于左值、将亡值、纯右值三者之一。</p><img src="/2019/03/10/C-C-11-主要的新语言特性/C++%2011主要的新语言特性(中英文对照).png"><img src="/2019/03/10/C-C-11-主要的新语言特性/根据设计理念和用户群对C++%2011新特性进行划分.png">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;C-11-主要的新语言特性&quot;&gt;&lt;a href=&quot;#C-11-主要的新语言特性&quot; class=&quot;headerlink&quot; title=&quot;C++ 11 主要的新语言特性&quot;&gt;&lt;/a&gt;C++ 11 主要的新语言特性&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;VA_ARGS&lt;/stron
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="https://allansmithx.github.io/categories/C/"/>
+    
+    
+      <category term="C++ 11" scheme="https://allansmithx.github.io/tags/C-11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>征信报告查询地址</title>
+    <link href="https://allansmithx.github.io/2019/03/10/Other-%E5%BE%81%E4%BF%A1%E6%8A%A5%E5%91%8A%E6%9F%A5%E8%AF%A2%E5%9C%B0%E5%9D%80/"/>
+    <id>https://allansmithx.github.io/2019/03/10/Other-征信报告查询地址/</id>
+    <published>2019-03-10T04:47:29.000Z</published>
+    <updated>2019-03-10T06:10:07.498Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="征信报告12处查询网点："><a href="#征信报告12处查询网点：" class="headerlink" title="征信报告12处查询网点："></a>征信报告12处查询网点：</h2><p>　　1.中国人民银行征信中心北京分中心(柜台查询/自助查询)<br>　　地址：西城区月坛北街26号恒华国际商务中心A座907<br>　　电话：68559206<br>　　2.北银消费金融公司(柜台查询)<br>　　地址：海淀区中关村大街22号中科大厦B座一层<br>　　电话：62521036<br>　　3.北京农商银行京粮支行(柜台查询/自助查询)<br>　　地址：朝阳区东三环中路16号京粮大厦一层<br>　　电话：51672305/51672306<br>　　4.北京农商银行大望路支行(自助查询)<br>　　地址：朝阳区西大望路15号院3号楼一层<br>　　电话：87723906<br>　　5.北京农商银行朝阳支行望京分理处(自助查询)<br>　　地址：朝阳区南湖中园130号<br>　　电话：64759036<br>　　6.北京农商银行黄村支行(自助查询)<br>　　地址：大兴区黄村兴华路216号<br>　　电话：69266642<br>　　7.北京农商银行丰台支行营业部(自助查询)<br>　　地址：丰台区西局南街101号<br>　　电话：63842592<br>　　8.北京农商银行石景山支行营业部(自助查询)<br>　　地址：石景山区杨庄东路78号<br>　　电话：88707930<br>　　9.北京农商银行通州支行(自助查询)<br>　　地址：通州区梨园北街63、65号<br>　　电话：69540796<br>　　10.浦发银行雅宝路支行(自助查询)<br>　　地址：东城区建国门北大街8号华润大厦一层<br>　　电话：85192337<br>　　11.浦发银行经济技术开发区支行(自助查询)<br>　　地址：大兴区天华路天华园二里二区19号楼大雄商业中心1层<br>　　电话：67890778<br>　　12.浦发银行慧忠支行(自助查询)<br>　　地址：朝阳区慧忠北里214号中奥华美达酒店一层<br>　　电话：64877966<br>北京助力融通信息技术有限公司</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;征信报告12处查询网点：&quot;&gt;&lt;a href=&quot;#征信报告12处查询网点：&quot; class=&quot;headerlink&quot; title=&quot;征信报告12处查询网点：&quot;&gt;&lt;/a&gt;征信报告12处查询网点：&lt;/h2&gt;&lt;p&gt;　　1.中国人民银行征信中心北京分中心(柜台查询/自助查询)
+      
+    
+    </summary>
+    
+      <category term="资源帖" scheme="https://allansmithx.github.io/categories/%E8%B5%84%E6%BA%90%E5%B8%96/"/>
+    
+    
+      <category term="征信报告查询网点" scheme="https://allansmithx.github.io/tags/%E5%BE%81%E4%BF%A1%E6%8A%A5%E5%91%8A%E6%9F%A5%E8%AF%A2%E7%BD%91%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网文摘抄</title>
+    <link href="https://allansmithx.github.io/2019/03/10/Other-%E7%BD%91%E6%96%87%E6%91%98%E6%8A%84/"/>
+    <id>https://allansmithx.github.io/2019/03/10/Other-网文摘抄/</id>
+    <published>2019-03-10T04:39:21.000Z</published>
+    <updated>2019-07-06T01:34:37.166Z</updated>
+    
+    <content type="html"><![CDATA[<p>##<br>逢人只说三分话，不可全抛一片心！</p><h2 id="酒剑仙"><a href="#酒剑仙" class="headerlink" title="酒剑仙"></a>酒剑仙</h2><p>御剑乘风来，除魔天地间，有酒乐逍遥，无酒我亦癫。<br>一饮尽江河，再饮吞日月，千杯醉不倒，唯我酒剑仙。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——酒剑仙 《仙剑奇侠传》</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;##&lt;br&gt;逢人只说三分话，不可全抛一片心！&lt;/p&gt;
+&lt;h2 id=&quot;酒剑仙&quot;&gt;&lt;a href=&quot;#酒剑仙&quot; class=&quot;headerlink&quot; title=&quot;酒剑仙&quot;&gt;&lt;/a&gt;酒剑仙&lt;/h2&gt;&lt;p&gt;御剑乘风来，除魔天地间，有酒乐逍遥，无酒我亦癫。&lt;br&gt;一饮尽江河，再饮
+      
+    
+    </summary>
+    
+      <category term="摘抄" scheme="https://allansmithx.github.io/categories/%E6%91%98%E6%8A%84/"/>
+    
+    
+      <category term="网文摘抄" scheme="https://allansmithx.github.io/tags/%E7%BD%91%E6%96%87%E6%91%98%E6%8A%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySql</title>
+    <link href="https://allansmithx.github.io/2019/02/13/MySql-MySql/"/>
+    <id>https://allansmithx.github.io/2019/02/13/MySql-MySql/</id>
+    <published>2019-02-13T06:43:14.000Z</published>
+    <updated>2019-02-13T06:43:14.919Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>linux 常用命令</title>
+    <link href="https://allansmithx.github.io/2019/01/29/linux-linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://allansmithx.github.io/2019/01/29/linux-linux-常用命令/</id>
+    <published>2019-01-29T09:12:11.000Z</published>
+    <updated>2019-01-29T09:14:21.349Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="linux-常用命令"><a href="#linux-常用命令" class="headerlink" title="linux 常用命令"></a>linux 常用命令</h2><ul><li>从windows给linux上传文件： rz + 文件</li><li>从Linux上下载文件：        sz + 文件</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;linux-常用命令&quot;&gt;&lt;a href=&quot;#linux-常用命令&quot; class=&quot;headerlink&quot; title=&quot;linux 常用命令&quot;&gt;&lt;/a&gt;linux 常用命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从windows给linux上传文件： rz + 文件&lt;/li&gt;
+      
+    
+    </summary>
+    
+      <category term="server" scheme="https://allansmithx.github.io/categories/server/"/>
+    
+    
+      <category term="linux 常用命令" scheme="https://allansmithx.github.io/tags/linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>28-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-28-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-28-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T20:58:09.000Z</published>
+    <updated>2019-01-27T21:03:45.937Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="28-Hadoop深入-HDFS原理"><a href="#28-Hadoop深入-HDFS原理" class="headerlink" title="28-Hadoop深入 HDFS原理"></a>28-Hadoop深入 HDFS原理</h2><img src="/2019/01/28/Hadoop-28-Hadoop深入-HDFS原理/HDFS写入流程.png" title="This is hadoop HDFS写入流程"><img src="/2019/01/28/Hadoop-28-Hadoop深入-HDFS原理/HDFS写入流程2.png" title="This is hadoop HDFS写入流程2">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;28-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#28-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;28-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;28-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;img src=
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>27-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-27-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-27-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T20:49:36.000Z</published>
+    <updated>2019-01-27T20:57:02.114Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="27-Hadoop深入-HDFS原理"><a href="#27-Hadoop深入-HDFS原理" class="headerlink" title="27-Hadoop深入 HDFS原理"></a>27-Hadoop深入 HDFS原理</h2><img src="/2019/01/28/Hadoop-27-Hadoop深入-HDFS原理/SecondaryNameNode执行流程.png" title="This is hadoop SecondaryNameNode执行流程"><img src="/2019/01/28/Hadoop-27-Hadoop深入-HDFS原理/02_SecondaryNameNode执行流程.png" title="This is hadoop 02_SecondaryNameNode执行流程">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;27-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#27-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;27-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;27-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;img src=
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>26-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-26-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-26-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T20:42:58.000Z</published>
+    <updated>2019-01-27T20:48:03.558Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="26-Hadoop深入-HDFS原理"><a href="#26-Hadoop深入-HDFS原理" class="headerlink" title="26-Hadoop深入 HDFS原理"></a>26-Hadoop深入 HDFS原理</h2><ul><li>DataNode启动后向NameNode注册，注册后会周期性（1小时）向NameNode上报块信息（BlockReport）<br>BlockReport数据内容： Block块与DataNode节点的映射关系（第二映射关系）</li><li>DataNode周期性的发送心跳（3s）给NameNode,心跳返回结果带有NameNode下发给DataNode的命令。如果超过10m,NameNode没有收到DataNode的心跳，则认为该节点不可用。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;26-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#26-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;26-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;26-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>25-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-25-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-25-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T20:25:15.000Z</published>
+    <updated>2019-01-27T20:41:17.311Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="25-Hadoop深入-HDFS原理"><a href="#25-Hadoop深入-HDFS原理" class="headerlink" title="25-Hadoop深入 HDFS原理"></a>25-Hadoop深入 HDFS原理</h2><p>DataNode</p><ul><li>数据存储在hdfs-site.xml的dfs.datanode.data.dir属性配置中<br>  存储内容： 数据本身数据的长度、校验和 和 时间戳。</li><li>文件块（block）：基本的存储单元，默认大小是128M，通过dfs.blocksize属性配置</li><li>副本策略： 默认是3个，通过dfs.replication属性配置<img src="/2019/01/28/Hadoop-25-Hadoop深入-HDFS原理/副本策略.png" title="This is hadoop hdfs 副本策略"><ul><li>第一个block副本放在和client所在的node里（如果client不在集群范围内，则这第一个的node是随机选取的，当然系统会尝试不选择那些太满或者太忙的node）</li><li>第二个副本放在与第一个节点不同机架的node中（随机选择）</li><li>第三个副本和第二个在同一个机架，随机放在不同的node中。如何还有更多的副本，就随机放在集群的node里。</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;25-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#25-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;25-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;25-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;p&gt;DataNo
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>24-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-24-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-24-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T20:07:01.000Z</published>
+    <updated>2019-01-27T20:23:38.128Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="24-Hadoop深入-HDFS原理"><a href="#24-Hadoop深入-HDFS原理" class="headerlink" title="24-Hadoop深入 HDFS原理"></a>24-Hadoop深入 HDFS原理</h2><h1 id="1、HDFS原理"><a href="#1、HDFS原理" class="headerlink" title="1、HDFS原理"></a>1、HDFS原理</h1><ul><li>1&gt;三大组件<br> NameNode、DataNode、SecondaryNameNode</li><li>2&gt;NameNode<br>  a.作用<pre><code>存储元数据（文件名、创建时间、大小、权限、文件与block块映射关系）</code></pre></li><li>3&gt;DataNode<br>  a.作用<pre><code>存储真实的数据信息</code></pre></li><li>4&gt;SecondaryNameNode<br>  a.作用<pre><code>减去NameNode压力，将edits编辑日志文件和fsimage镜像文件进行合并。</code></pre></li><li>数据存储在hdfs-site.xml的dfs.namenode.name.dir属性配置中</li></ul><ul><li>1.fsimage:镜像文件，存储某时段内元数据信息和文件与Block块的映射关系（NameNode第一映射关系）</li><li>2.edits：编辑日志文件</li><li>3.seen_txid操作事务id</li><li>4.VERSION:存储命名空间ID、集群ID等信息<h2 id="多次格式化namenode的问题原因解释"><a href="#多次格式化namenode的问题原因解释" class="headerlink" title="多次格式化namenode的问题原因解释"></a>多次格式化namenode的问题原因解释</h2></li></ul><ul><li>hdfs格式化会改变VERSION文件中的clusterID,首次格式化时datanode和namenode会产生相同的clusterID;<br>如果重新执行格式化，namenode的clusterID改变，就会与datanode的clusterID不一致，如果重新启动或读写hdfs就会挂掉。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;24-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#24-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;24-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;24-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;h1 id=&quot;1
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>23-Hadoop深入 课程大纲</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-23-Hadoop%E6%B7%B1%E5%85%A5-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-23-Hadoop深入-课程大纲/</id>
+    <published>2019-01-27T20:03:06.000Z</published>
+    <updated>2019-01-27T20:05:15.844Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hadoop深入-课程大纲"><a href="#Hadoop深入-课程大纲" class="headerlink" title="Hadoop深入  课程大纲"></a>Hadoop深入  课程大纲</h2><ul><li>1、HDFS原理</li><li>2、HDFS命令行及Java API使用</li><li>3、YARN资源调度与隔离</li><li>4、MapRduce原理与实践</li><li>5、Shuffle流程</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Hadoop深入-课程大纲&quot;&gt;&lt;a href=&quot;#Hadoop深入-课程大纲&quot; class=&quot;headerlink&quot; title=&quot;Hadoop深入  课程大纲&quot;&gt;&lt;/a&gt;Hadoop深入  课程大纲&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1、HDFS原理&lt;/li&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>22-历史服务器</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-22-%E5%8E%86%E5%8F%B2%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-22-历史服务器/</id>
+    <published>2019-01-27T19:55:50.000Z</published>
+    <updated>2019-01-27T20:00:04.692Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="历史服务器"><a href="#历史服务器" class="headerlink" title="历史服务器"></a>历史服务器</h2><ul><li>mapreduce.jobhistory.address<br> jobhistory的rpc访问地址</li><li>mapreduce.jobhistory.webapp.address<br> jobhistory的http访问地址</li><li>启动<br>sbin/mr-jobhistory-daemon.sh start historyserver</li><li>WEB UI<br>http://&lt;主机名&gt;:19888</li><li>停止<br>sbin/mr-jobhistory-daemon.sh stop historyserver</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;历史服务器&quot;&gt;&lt;a href=&quot;#历史服务器&quot; class=&quot;headerlink&quot; title=&quot;历史服务器&quot;&gt;&lt;/a&gt;历史服务器&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;mapreduce.jobhistory.address&lt;br&gt; jobhistory的rpc访问地址&lt;
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20、21-初识MapReduce</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-20-%E5%88%9D%E8%AF%86MapReduce/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-20-初识MapReduce/</id>
+    <published>2019-01-27T19:25:18.000Z</published>
+    <updated>2019-01-27T19:53:36.742Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="20、21-初识MapReduce"><a href="#20、21-初识MapReduce" class="headerlink" title="20、21-初识MapReduce"></a>20、21-初识MapReduce</h2><ul><li>WordCount程序<br>   bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.x.x.jar wordcount <input> <output></output></li><li><p>WEB UI 监控</p><ul><li>节点状况</li><li>MapReduce Application状况</li><li>Container分配状况</li></ul></li><li><p>启动Hadoop服务器<br> sbin/start-all.sh</p></li><li>浏览器访问   </li><li>各个指标<br>a.Cluster Metrics<br>   集群指标：app(提交、排队、运行、完成）、Container个数、资源（内存、cpu)<br>b.Cluster Nodes Metrics<br>   及其状态： active、 decommissioning、decommissioned、lost、unhealthy\reboot<br>c.dr.who用户的指标<br>  dr.who用户：通过浏览器访问访问默认使用dr.who 的用户   <h2 id="聚合日志"><a href="#聚合日志" class="headerlink" title="聚合日志"></a>聚合日志</h2>a.含义： I.分布式计算作业放到Nodemanager运行，日志信息放在NodeManager本地目录<br>  yarn.nodemanager.log-dirs: ${yarn.log.dir}/userlogs<pre><code>II.通过配置将本地日志放到HDFS服务器上，即聚合日志的概念</code></pre>b.配置<pre><code>+ yarn.log-aggregation-enable 是否启用日志聚合功能，日志聚合开启后保存到HDFS上+ yarn.log-aggregation.retain-seconds 聚合后的日志在HDFS上保存多长时间，单位为s+ yarn.log-aggregation.retain-check-interval-seconds 删除任务在HDFS上执行的间隔，执行时候讲满足条件的日志删除（超过保存时间的日志），如果是0或者负数，则为参数2设置为1/10+ yarn.nodemanager.log.retain-seconds 当不启用日志聚合此参数生效，日志文件保存在本地的时间，单位为s+ yarn.nodemanager.remote-app-log-dir 当应用程序运行结束后，日志被转移到的HDFS目录（启用日志聚集功能时有效），修改为保存的日志文件夹+ yarn.nodemanager.remote-app-log-dir-suffix 远程日志目录子目录名称（启用日志聚集功能时有效）</code></pre></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;20、21-初识MapReduce&quot;&gt;&lt;a href=&quot;#20、21-初识MapReduce&quot; class=&quot;headerlink&quot; title=&quot;20、21-初识MapReduce&quot;&gt;&lt;/a&gt;20、21-初识MapReduce&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Word
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>19-ssh登录</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-19-ssh%E7%99%BB%E5%BD%95/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-19-ssh登录/</id>
+    <published>2019-01-27T19:15:21.000Z</published>
+    <updated>2019-01-27T19:18:45.517Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SSH免密码登录"><a href="#SSH免密码登录" class="headerlink" title="SSH免密码登录"></a>SSH免密码登录</h2><ul><li>生成公钥/私钥对<br> ssh-keygen -t rsa</li><li>拷贝公钥至远程主机或本机authorized_keys文件<br> ssh-copy-id &lt;主机名&gt;</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;SSH免密码登录&quot;&gt;&lt;a href=&quot;#SSH免密码登录&quot; class=&quot;headerlink&quot; title=&quot;SSH免密码登录&quot;&gt;&lt;/a&gt;SSH免密码登录&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;生成公钥/私钥对&lt;br&gt; ssh-keygen -t rsa&lt;/li&gt;
+&lt;li&gt;
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>17-ntp服务器同步时间</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-17-ntp%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8C%E6%AD%A5/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-17-ntp服务器同步/</id>
+    <published>2019-01-27T18:44:16.000Z</published>
+    <updated>2019-01-27T19:09:36.401Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="17-ntp服务器同步时间"><a href="#17-ntp服务器同步时间" class="headerlink" title="17-ntp服务器同步时间"></a>17-ntp服务器同步时间</h2><h2 id="分布式环境-distributed"><a href="#分布式环境-distributed" class="headerlink" title="分布式环境(distributed)"></a>分布式环境(distributed)</h2><ul><li><p>ntp服务器同步时间</p><ul><li>1&gt; 作用  同步三个服务器的时间，让服务器一致</li><li><p>2&gt; 机器1上配置ntp时间服务器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> vim /etc/sysconfig/ntpd</span><br><span class="line">    SYNC_HWCLOCK=yes</span><br><span class="line"> vim /etc/ntp.conf</span><br><span class="line">    #server xxx</span><br><span class="line">    server 127.127.1.0</span><br><span class="line">    fudge  127.127.1.0 stratum 10</span><br><span class="line">    restrict 192.168.160.0 xxxx</span><br><span class="line"> ```  </span><br><span class="line"> - 3&gt; 机器1重启ntp服务器</span><br><span class="line">     service ntpd restart</span><br><span class="line"> - 4&gt; 机器1设置时间</span><br><span class="line">      date -s yyyy-MM-dd</span><br><span class="line">      date -s HH:mm:ss</span><br><span class="line"> - 5&gt;机器2/3 同步时间</span><br><span class="line"> 手工同步：</span><br><span class="line">    /usr/sbin/ntpdate &lt;主机名&gt;</span><br><span class="line"> 定时同步：</span><br><span class="line">    crontab -e :0-59/10****/usr/sbin/ntpdate &lt;主机名&gt; </span><br><span class="line">    </span><br><span class="line">    注： crontab格式： 分 小时 天 月 周 &lt;command&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/etc/sysconfig/ntpd文件添加SYNC_HWCLOCK = yes</span><br><span class="line">/etc/ntp.conf 文件配置</span><br><span class="line">取消注释：</span><br><span class="line">//修改为统一网段</span><br></pre></td></tr></table></figure><p>  restrict 192.168.139.0 mask 255.255.255.0 nomodify notrap<br>  server 127.127.1.0   #local clock<br>  fudge  127.127.1.0 stratum 10<br><code>`</code></p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;17-ntp服务器同步时间&quot;&gt;&lt;a href=&quot;#17-ntp服务器同步时间&quot; class=&quot;headerlink&quot; title=&quot;17-ntp服务器同步时间&quot;&gt;&lt;/a&gt;17-ntp服务器同步时间&lt;/h2&gt;&lt;h2 id=&quot;分布式环境-distributed&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>18-hadoop分布式配置</title>
+    <link href="https://allansmithx.github.io/2019/01/28/Hadoop-18-hadoop%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE/"/>
+    <id>https://allansmithx.github.io/2019/01/28/Hadoop-18-hadoop分布式配置/</id>
+    <published>2019-01-27T18:44:16.000Z</published>
+    <updated>2019-01-27T19:10:19.650Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="18-hadoop分布式配置"><a href="#18-hadoop分布式配置" class="headerlink" title="18-hadoop分布式配置"></a>18-hadoop分布式配置</h2><p> 分布式环境（Distributed)</p><pre><code>+ 配置yarn-site.xml 文件    &lt;property&gt;       &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;       &lt;value&gt;master&lt;/value&gt;    &lt;/property&gt;+ 配置$HADOOP_HOME/etc/hadoop/slaves文件   hadoop-senior01.test.com   hadoop-senior02.test.com   hadoop-senior03.test.com</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;18-hadoop分布式配置&quot;&gt;&lt;a href=&quot;#18-hadoop分布式配置&quot; class=&quot;headerlink&quot; title=&quot;18-hadoop分布式配置&quot;&gt;&lt;/a&gt;18-hadoop分布式配置&lt;/h2&gt;&lt;p&gt; 分布式环境（Distributed)&lt;/p
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>30-Hadoop深入 HDFS原理</title>
+    <link href="https://allansmithx.github.io/2019/01/27/Hadoop-30-Hadoop%E6%B7%B1%E5%85%A5-HDFS%E5%8E%9F%E7%90%86/"/>
+    <id>https://allansmithx.github.io/2019/01/27/Hadoop-30-Hadoop深入-HDFS原理/</id>
+    <published>2019-01-27T11:09:59.000Z</published>
+    <updated>2019-01-27T21:32:57.242Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="30-Hadoop深入-HDFS原理"><a href="#30-Hadoop深入-HDFS原理" class="headerlink" title="30-Hadoop深入 HDFS原理"></a>30-Hadoop深入 HDFS原理</h2><img src="/2019/01/27/Hadoop-30-Hadoop深入-HDFS原理/安全模式.png" title="This is hadoop 安全模式"><img src="/2019/01/27/Hadoop-30-Hadoop深入-HDFS原理/命令操作.png" title="This is hadoop 命令操作2">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;30-Hadoop深入-HDFS原理&quot;&gt;&lt;a href=&quot;#30-Hadoop深入-HDFS原理&quot; class=&quot;headerlink&quot; title=&quot;30-Hadoop深入 HDFS原理&quot;&gt;&lt;/a&gt;30-Hadoop深入 HDFS原理&lt;/h2&gt;&lt;img src=
+      
+    
+    </summary>
+    
+      <category term="hadoop" scheme="https://allansmithx.github.io/categories/hadoop/"/>
+    
+    
+      <category term="大数据Hadoop基础入门到高级精通" scheme="https://allansmithx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AEHadoop%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%88%B0%E9%AB%98%E7%BA%A7%E7%B2%BE%E9%80%9A/"/>
+    
+  </entry>
+  
+</feed>
